@@ -1,0 +1,75 @@
+@use'variables' as v;
+.main_div{
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+   // background-color: red;
+    position: relative;
+}
+.main{
+    margin-bottom: 20px;
+    
+}
+.img_desktop{
+    width: 60em;
+    margin-left: 50px;
+}
+
+.main__container{
+    &__title{
+
+        h2{
+            font-size: 58px;
+            font-weight: bold;
+            
+        }
+    }
+    &__text{
+        
+        padding-top: 10px;
+        
+        p{
+            font-size: 15px;
+            margin-bottom: 20px;
+        }
+    }
+  
+    display: flex; 
+    padding: 25px;
+    margin: auto;
+    &__button{
+        width: 185px;
+        height: 48px;
+        text-transform: uppercase;
+        background-color: v.$SoftRed;
+        color:v.$OffWhite;
+        border: none;
+        transition: all 0.5s ease;
+    }
+    &__button:hover{
+        background-color: v.$VeryDarkBlue;
+    }
+
+}
+@media(max-width:768px){
+    .main_div{
+        
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__container{
+        flex-direction: column;
+        &__title{
+           margin-bottom: 20px;
+            h2{
+                font-size: 48px;
+            }
+        }
+    }
+
+    .img_desktop{
+       height: 350px;
+       width: 500px;
+      
+    }
+}

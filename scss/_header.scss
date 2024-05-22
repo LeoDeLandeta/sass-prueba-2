@@ -1,0 +1,65 @@
+@use'variables' as v;
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    margin-top: 2em;
+    padding-right: 2em;
+    padding-left: 1em;
+}
+ul{
+    list-style: none;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    justify-content:space-around;
+    padding: 0;
+    height: auto;
+    position: relative;
+    font-size: 16px;
+    width: 438px;
+}
+li{
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+a{
+    text-decoration: none;
+    color: #000;
+    font-size: 18px;
+}
+a:hover{
+    cursor: pointer;
+    color: v.$SoftOrange;
+
+}
+.menu{
+    visibility: hidden;
+}
+
+
+@media(max-width:768px){
+    ul{
+        background-color: white;
+        top: 0;
+        height: full;
+        width: 256px;
+        right: 0;
+        font-size: 18px;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: space-around;
+        margin-top: 50px;
+    }
+    li{
+        margin-bottom: 28px;
+    }
+    .menu{
+        visibility: visible;
+        
+    }
+}

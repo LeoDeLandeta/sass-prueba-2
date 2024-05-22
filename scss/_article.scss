@@ -1,0 +1,60 @@
+@use'variables' as v;
+
+.article{
+  
+    margin-bottom: 20px;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    
+ 
+    &__container{
+        
+        height: 165px;
+        width: 343px;
+        display: flex;
+        border: 1px solid v.$GrayishBlue;
+        margin-left: 30px;
+        &__div1{
+          // background-color: red;
+            img{
+               width: 100px;
+            }
+            
+            margin-bottom: 10px;
+        }
+        &__div2{
+            padding-left: 20px;
+            &_title{
+                color: v.$DarkGrayishBlue;
+                font-size: 30px;
+                font-weight: bold;
+                margin-bottom: 18px;
+            }
+            &_h2{
+                font-size: 20px;
+                font-weight: bold;
+                margin-bottom: 18px;
+                cursor: pointer;
+            }
+            &_h2:hover{
+                color: v.$SoftOrange;
+            }
+            &_p{
+                color: v.$DarkGrayishBlue;
+                font-size: 16px;
+            }
+        }
+        
+    }
+
+}
+@media(max-width:768px){
+    .article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+    }
+}

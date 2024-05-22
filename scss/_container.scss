@@ -1,0 +1,43 @@
+@use'variables' as v;
+
+.container{
+    &__article{
+       margin-bottom: 50px;
+    }
+    background-color: v.$VeryDarkBlue;
+    padding: 28px 40px;
+    height: 50em;
+    margin-right: 20px;
+    color: v.$OffWhite;
+    h1{
+        color:v.$SoftOrange;
+        font-size: 50px;
+        font-weight: bold;
+    }
+    &__article{
+        
+        height: 140px;
+        position: relative;
+       padding-top: 20px;
+       padding-bottom: 28px;
+       h2{
+        cursor: pointer;
+        font-size: 40px;
+        margin-bottom: 10px;
+       }
+       h2:hover{
+        color: v.$SoftOrange;
+       }
+       p{
+        font-size: 21px;
+        margin-bottom: 30px;
+        border-bottom: 2px solid v.$DarkGrayishBlue;
+        padding-bottom: 30px;
+       }
+    }
+}
+@media(max-width:768px){
+    .container{
+        margin: auto;
+    }
+}
